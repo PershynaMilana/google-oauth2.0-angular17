@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 2%;">
+    <h2>Main Component</h2>
+    <hr>
+    <p [ngStyle]="{'color': isLoggedIn ? 'green' : 'red'}">IsLoggedIn: {{ isLoggedIn }}</p>
+    <p>Email: {{ userEmail }}</p>
+    <p>Token: {{ userToken }}</p>
+    <div *ngIf="isLoggedIn" class="mt-3">
+        <img src=".../../../../assets/cat.jpg" alt="Cat Image" class="img-fluid" style="max-width: 300px;">
+    </div>
+    <button type="button" class="btn btn-danger mt-3" (click)="logOut()">Log out</button>
+</div>
